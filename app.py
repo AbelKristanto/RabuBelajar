@@ -4,9 +4,11 @@ import pandas as pd
 import pickle
 import time
 from PIL import Image
+from sklearn.ensemble import RandomForestClassifier
 
 # Load the model
-with open("hasilgenerate.pkl", "rb") as f:
+location_filepath = "hasilgenerate.pkl"
+with open(location_filepath, "rb") as f:
     heart_model = pickle.load(f)
 
 # Set up page configuration
